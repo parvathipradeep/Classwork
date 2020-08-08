@@ -1,0 +1,32 @@
+<html>
+    <header>
+        <style>
+            input {
+                padding: 5px;
+                margin: 20px;
+                text-align: left;
+            }
+        </style>
+    </header>
+    <body>
+
+        <h1 style="text-align: center;">Simple interest calculation</h1>
+        <form style="margin: 20px;padding: 10px;">
+            principal: <input type="text" id="p"/></br>
+            rate: <input type="text" id="r"/></br>
+            time in years: <input type="text" id="t"/></br>
+            <input type="button" onclick="si()" value="Get SI"/>
+
+        </form>
+        <script lang="javascript">
+            function si(){
+                p=document.getElementById("p").value;
+                t=document.getElementById("t").value;
+                r=document.getElementById("r").value;
+                document.getElementById("res").innerHTML=(p*t*r)/100;
+            }
+        </script>
+        <p>Result: </p><br>
+        <span id= "res"></span>
+    </body>
+</html>

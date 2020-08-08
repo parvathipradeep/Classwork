@@ -1,0 +1,37 @@
+
+<head>
+
+</head>
+
+<body>
+    <h1> Sorting names</h1>
+    <form>
+        Enter number of names
+        <input type="text" id="name" />
+        <input type="button" value="next" onclick="generate()" />
+        
+    </form>
+    <script lang="javascript">
+        function generate() {
+    
+            var a = document.getElementById("name").value;
+            var b=document.getElementById("button");
+            a.addEventListener('keypress',function(e)
+            {
+                if(e.key=== 'Enter'){
+                    document.getElementById("res").innerHTML="<p>Works</p>"
+                }
+                else{
+                    document.getElementById("res").innerHTML="<p>No</p>"
+                }
+               
+            }); 
+            
+        }
+     </script>
+     <p>
+         Result:
+         <span id= "res"></span>
+
+     </p>
+</body>

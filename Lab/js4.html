@@ -1,0 +1,44 @@
+<html>
+    <header>
+        <style>
+            form {
+                padding: 2px;
+                margin: 20px;
+            }
+            input {
+                margin: 10px;
+            }
+        </style>
+    </header>
+    <body>
+        <h1 style="text-align: center;">Fibonacci series</h1>
+        <form>
+            Enter number<input type="text" id="num"></br>
+            <input type="button"  onclick="fibonacci()" value="Get fibonacci">
+        </form> 
+        <script lang="javascript">
+                
+            function fibonacci(){
+                n=document.getElementById("num").value;
+                function fib(n){
+                   
+                   if(n==1){
+                        return 0;
+                   }
+                   if(n==2)
+                   {
+                       return 1;
+                   }
+                   return fib(n-1)+fib(n-2);
+                    
+                }
+                document.getElementById("res").innerHTML=fib(n);
+
+            }
+         </script>
+            
+        <p>Result: </p><br>
+        <span id= "res"></span>
+        
+    </body>
+</html>
