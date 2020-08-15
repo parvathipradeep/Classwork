@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Reverse sort</title>
+    </head>
+    <body>
+        <form name="form" method="post">
+            <p>Enter the numbers:
+                <input type="text" id="num">
+                <input type="button"  value="insert" onclick="insert()">
+                <input type="button" value="Get sort" onclick="revsort()">
+            </p>
+        </br>
+            <p>
+                Result:
+                <p id="res"></p>
+            </p>
+        </form>
+        <script lang="javascript">
+            var l=[];
+            try{
+            function insert(){
+                l.push(document.getElementById("num").value);
+            }
+            }
+            catch(e){
+                alert(e);
+            }
+            try{
+            function revsort(){
+                document.getElementById("res").innerHTML=l.sort().reverse();
+            }
+            }
+            catch(e){
+                alert(e);
+            }
+
+        </script>
+    </body>
+</html>

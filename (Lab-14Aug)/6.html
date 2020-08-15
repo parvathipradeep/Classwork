@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Grade</title>
+    </head>
+    <body>
+        <form name="form" method="post">
+            <p>Enter score
+                <input type="number" id="num">
+                <input type="button" value="Grade" onclick="grade()">
+                <input type="button" value="List" onclick="disp()">
+            </p>
+            <p>Result</p>
+            <p id="res"></p>
+            <p>List</p>
+            <p id="lis"></p>
+        </form>
+        <script lang="javascript">
+            var l=[];
+            function grade(){
+                try{
+                var g=document.getElementById("num").value;
+                if(g>=90 && g<=100){
+                    l[l.length].push('For'+g+', you got an A');
+                    document.getElementById("res").innerHTML="<p>A</p>";
+                }
+                else  if(g>=80 && g<90){
+                    l[l.length].push('For'+g+', you got a B');
+                    document.getElementById("res").innerHTML="<p>B</p>";
+                }
+                else  if(g>=70 && g<80){
+                    l[l.length].push('For'+g+', you got a C');
+                    document.getElementById("res").innerHTML="<p>C</p>";
+                }
+                else  if(g>=60 && g<70){
+                    l[l.length].push('For'+g+', you got a D');
+                    document.getElementById("res").innerHTML="<p>D</p>";
+                }
+                else {
+                    l[l.length].push('For'+g+', you got an F');
+                    document.getElementById("res").innerHTML="<p>F</p>";
+                }
+            }
+            catch(e){
+                e;
+            }
+            }
+          
+            function disp(){
+                
+                    document.getElementById("lis").innerHTML=l;
+                
+            }
+        </script>
+    </body>
+</html>

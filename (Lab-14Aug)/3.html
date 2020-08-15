@@ -1,0 +1,46 @@
+<html>
+    <head>
+    <title>Pattern</title>
+    </head>
+    <body>
+        <form name="form" method="POST">
+            <p>Enter number
+                <input type="text" id="num">
+                <input type="button"  value="insert" onclick="insert()">
+                <input type="button" value="Cancel" onclick="cancel()">
+                <input type="button" value="Pattern" onclick="pat()">
+            </p>
+            <p>Result</p>
+            <p id="res"></p>
+        </form>
+        <script lang="javascript">
+            var l=[];
+            function insert(){
+                try{
+                l.push(document.getElementById("num").value);
+                }
+                catch(e){
+                    e;
+                }
+            }
+            function cancel(){
+                
+            }
+            function pat(){
+                try{
+                for(var i=0;i<l.length;i++){
+                    document.getElementById.innerHTML=document.write("<p></p>");
+                    for (var j=0;j<l[i];j++){
+                        document.getElementById.innerHTML=document.writeln("<p>*</p>");
+                    }
+                }
+                }
+                catch(e){
+                    e;
+                }
+                }
+            }
+
+        </script>
+    </body>
+</html>

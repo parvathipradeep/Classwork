@@ -1,0 +1,29 @@
+<html>
+   <head>
+       <title>Text to Array</title>
+
+       <script lang="javascript">
+        function texttoarray(){
+            var res;
+            try{
+            res=texarr.inp.value.split(" ");
+            document.getElementById("res").innerHTML=res;
+            }
+            catch(e){
+                alert(e);
+            }
+            
+  }
+        
+        </script>
+   </head>
+   <body>
+       <form name="texarr" action="">
+           <p>Enter the phrase:<input name="inp" type="text">
+            <input type="button" value="Get words" onclick="texttoarray()">
+            </p>
+            <p>Output</p></br>
+            <p id="res"></p>
+       </form>
+   </body>
+</html>
