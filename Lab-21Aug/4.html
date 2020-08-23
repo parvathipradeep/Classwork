@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <style>
+        @font-face{
+ font-family:'Digital dream';
+ src: url('DIGITALDREAM.ttf');
+}
+            body{
+                background-color: black;
+            }
+            #clock,a{ 
+                font-family:'Digital dream';
+                color: #66ff99;
+                font-size: 70px;
+                text-align: center;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                text-decoration:none;
+            }
+
+            sub {
+                font-size: 30px;
+            }
+
+        </style>
+        <body>
+            
+        <div id="clock">
+         
+        </div>
+ 
+        
+        
+        <script lang="javascript">
+            function currentTime(){
+            var date=new Date();
+            var hour=date.getHours();
+            var min=date.getMinutes();
+            var sec=date.getSeconds();
+            var day=date.getUTCDay();
+            var dd=date.getDate();
+            var mm=date.getMonth()+1;
+            var y=date.getFullYear();
+            if(dd<10){dd='0'+dd;}
+            if(mm<10){mm='0'+mm;}
+            var dmy=dd+'-'+mm+'-'+y;
+            day=getday(day);
+            function getday(d){
+                switch (d) {
+                    case 0:
+                        return "Sunday";
+                        break;
+                    case 1:
+                        return "Monday";
+                        break;
+                    case 2:
+                        return"Tuesday";
+                        break;
+                    case 3:
+                        return "Wednesday";
+                        break;
+                    case 4:
+                       return "Thursday";
+                        break;
+                    case 5:
+                        return"Friday";
+                        break;
+                    case  6:
+                        return "Saturday";
+                    }
+            }
+            var midday = "AM";
+            midday = (hour >= 12) ? "PM" : "AM";
+            hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12): hour);
+            hour=updateTime(hour);
+            min=updateTime(min);
+            sec=updateTime(sec);
+            
+            //document.getElementById("clock").innerText=hour + ":"+min+ ":"+sec+ " " +midday+"\n\t"+day;
+            document.getElementById("clock").innerHTML="<h2 style=font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;>Digital Clock</h2></br>"+
+            hour + ":"+min+ ":"+sec+ " " +midday+"</br><sub>"+dmy+" "+day+"</sub>"
+            +"</br><div class=stopwatch><a href=4a.html><sub >Stopwatch</sub></div>"+
+            "</br><div class=alarm><a href=4b.html><sub>Alarm</sub></div>";
+
+
+            var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
+            }
+
+            function updateTime(k) {
+            if (k < 10) {
+                return "0" + k;
+            }
+            else {
+                return k;
+            }
+            }
+
+            currentTime();
+
+
+        </script>
+    </body>
+    </head>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            table{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+        <body>
+        <h1 style="text-align: center; font-family: cursive;">Multiplication table</h1>
+        <p style="text-align: center;font-family: cursive;">Generate table
+        <input type="button" value="Click here" onclick="mul()">
+        </p>
+    </br>
+        <p style="text-align: center;font-size: medium;font-family: cursive;">Result</p>
+        <p id="res" style="text-align: center;font-size: medium;"></p>
+
+    <script lang="javascript">
+        function mul(){
+            var rows = prompt("Enter the number of rows for your multiplication table ");
+             var cols = prompt("Enter the columns for your multiplication table ");
+            if(rows == "" || rows == null)
+   		        rows = 10;
+            if(cols== "" || cols== null)
+   		        cols = 10;
+            createTable(rows, cols);
+                function createTable(rows, cols)
+                    {
+                        var j=1;
+                        var output = "<table border='1' width='500' cellspacing='0'cellpadding='5'>";
+                        for(i=1;i<=rows;i++)
+                            {
+    	                        output = output + "<tr>";
+                                while(j<=cols)
+                                    {
+  		                                output = output + "<td>" + i*j + "</td>";
+   		                                j = j+1;
+   		                            }
+   		                    output = output + "</tr>";
+   		                    j = 1;
+                            }
+                        output = output + "</table>";
+                        document.getElementById("res").innerHTML=output;
+                    }
+            }
+    </script>
+    </body>
+    </head>
+
+</html>

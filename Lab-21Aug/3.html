@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <style>
+             @font-face{
+            font-family:'veteran_typewriter';
+            src: url('veteran_typewriter.ttf');
+            }
+            h2,ol,li{
+                font-family: 'veteran_typewriter';
+            }
+            ol,li{
+                padding:5px;
+            }
+
+            ol.leaders {
+            max-width: 35em;
+            padding: 0;
+            overflow-x: hidden;
+            list-style: none}
+
+            ol.leaders li:before {
+            float: left;
+            width: 0;
+            white-space: nowrap;
+            content:
+        ". . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . "}
+            ol.leaders span:first-child {
+            padding-right: 0.33em;}
+            ol.leaders span + span {
+            float: right;
+            padding-left: 0.33em;
+            position: relative;
+            z-index: 1;}
+
+            p{
+                font-family: 'veteran_typewriter';
+                margin:20px;
+                padding:5px;
+            }
+           
+           input[type=button] {
+                font-family: 'veteran_typewriter';
+                margin:40px;
+                padding:5px;
+           }
+
+        </style>
+      
+    </head>
+    <body>
+            <h2 style="text-align: center;">Table of contents</h2>
+            <p> Ensure that input is given in order</br>
+                <input type="button"id="a" value="Add chapter" onclick="addtoc()">
+                <input type="button" id="d" value="Display" onclick="display()">
+                <input type="button" value="Clear" onclick="window.open(_self)">
+                 </p>
+            <ol type="1" id="res" class=leaders></ol>
+    </body>
+    <script lang="javascript">
+        var dict={"1":"A Gentle Introduction","39":"Introducing javascript","77":"Control Statements"};
+        var t="";
+        var temp=0;
+        function addtoc(){
+            var title=prompt('Enter the chapter name of book: ');
+            var pg=parseInt(prompt('Enter the page where it starts: '));
+            if(title==""){
+                alert('Enter valid chapter name');
+            }
+            if(pg==""){
+                alert('Enter valid page number');
+            }
+            
+            dict[pg]=title;
+        }
+
+        function display(){
+            
+            var keys = Object.keys(dict);
+            for(var j=0;j<keys.length;j++){
+                for(var k=j+1;k<keys.length;k++){
+                    if(parseInt(keys[j])>parseInt(keys[k])){
+                        temp=keys[j];
+                        keys[j]=keys[k];
+                        keys[k]=temp;
+                    }
+                }
+            }
+
+            for (var i=0; i<keys.length; i++) {
+                var key = keys[i];
+                var value = dict[key];
+            t+="<li>"+(i+1)+".  "+"<span>"+value+"</span><span>"+key+"</span></li>";
+            } 
+            document.getElementById("res").innerHTML=t;
+        }
+
+       
+    </script>
+</html>

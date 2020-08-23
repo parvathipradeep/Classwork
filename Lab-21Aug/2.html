@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            h2{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: xx-large;
+            }
+            p{
+                text-align: center;
+                font-size: larger;
+                padding: 30px;
+                margin: 20px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+        </style>
+        <body>
+        <h2 style="text-align: center;">Validating date in dd-mm-yyyy format</h2>
+        <p>Enter the date
+            <input type="text" id="date">
+            <input type="button" value="Check" onclick="val()">
+        </p>
+        <script lang="javascript">
+            function val(){
+                var d=document.getElementById("date").value;
+                var regex=/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+                if(regex.test(d)){
+                    alert('Valid')
+                }
+                else{
+                    alert('Invalid format')
+                }
+            }
+        </script>
+    </body>   
+    </head>
+</html>
