@@ -1,0 +1,13 @@
+<!DOCTYPE note
+[
+<!ELEMENT isro (region,location,feature,rov,area,depth,dist,ship,items)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT feature (#PCDATA)>
+<!ELEMENT rov (#PCDATA)>
+<!ELEMENT area (#PCDATA)>
+<!ELEMENT depth (#PCDATA)>
+<!ELEMENT dist (#PCDATA)>
+<!ELEMENT ship (#PCDATA)>
+<!ELEMENT items (#PCDATA)>
+]>

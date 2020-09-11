@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="one.xsl"?>
+<survey>
+    <isro>
+        <region >Atlantic</region>
+        <location >Carter</location>
+        <feature >Seamount</feature>
+        <rov >5</rov>
+        <area>2.78</area>
+        <depth>200-2800</depth>
+        <dist >630</dist>
+        <ship >0.12</ship>
+        <items>12.23</items>
+    </isro>
+    <isro>
+        <region>Atlantic</region>
+        <location>Knipovich</location>
+        <feature>Seamount</feature>
+        <rov >3</rov>
+        <area>2.18</area>
+        <depth>600-2800</depth>
+        <dist>1360</dist>
+        <ship>0.23</ship>
+        <items>2.29</items>
+    </isro>
+    <isro>
+        <region >Atlantic</region>
+        <location>VEMA</location>
+        <feature>Fracture Zone</feature>
+        <rov>3</rov>
+        <area>1.80</area>
+        <depth>600-3000</depth>
+        <dist>1040</dist>
+        <ship>0.07</ship>
+        <items >5.56</items>
+    </isro>
+    <isro>
+        <region>Atlantic</region>
+        <location>Vayda</location>
+        <feature >Seamount</feature>
+        <rov>3</rov>
+        <area>3.10</area>
+        <depth>400-2300</depth>
+        <dist >1170</dist>
+        <ship >0.01</ship>
+        <items>1.94</items>
+    </isro>
+    <isro>
+        <region>Atlantic</region>
+        <location>Gramberg</location>
+        <feature >Seamount</feature>
+        <rov>2</rov>
+        <area>1.70</area>
+        <depth>900-2200</depth>
+        <dist >940</dist>
+        <ship >0.21</ship>
+        <items>0.59</items>
+    </isro>
+    <isro>
+        <region>Indian</region>
+        <location>Coral</location>
+        <feature >Seamount</feature>
+        <rov>5</rov>
+        <area>2.04</area>
+        <depth>500-1500</depth>
+        <dist >1610</dist>
+        <ship >0.01</ship>
+        <items>1.47</items>
+    </isro>
+        <isro>
+        <region>Indian</region>
+        <location>Melville</location>
+        <feature >Bank</feature>
+        <rov>4</rov>
+        <area>1.35</area>
+        <depth>100-1300</depth>
+        <dist >1440</dist>
+        <ship >0.00</ship>
+        <items>13.33</items>
+    </isro>
+        <isro>
+        <region>Indian</region>
+        <location>Middle of What</location>
+        <feature >Seamount</feature>
+        <rov>3</rov>
+        <area>0.41</area>
+        <depth>1000-1400</depth>
+        <dist >1460</dist>
+        <ship >0.00</ship>
+        <items>2.44</items>
+    </isro>
+</survey>
+
+
+  
